@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: system-ui, Arial, sans-serif; }
+body { display: grid; place-items: center; background: #0f172a; color: #e2e8f0; }
+.container { width: min(720px, 92vw); }
+h1 { text-align: center; margin: 16px 0 8px; }
+
+.card { background: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 16px; margin: 12px 0; }
+.hidden { display: none; }
+
+.row { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.join { display: flex; gap: 8px; }
+input { padding: 10px 12px; border-radius: 8px; border: 1px solid #334155; background: #0b1220; color: #e2e8f0; outline: none; }
+input:focus { border-color: #64748b; }
+
+button { padding: 10px 14px; border-radius: 10px; border: 1px solid #334155; background: #1f2937; color: #e2e8f0; cursor: pointer; }
+button:hover { filter: brightness(1.1); }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+.danger { background: #7f1d1d; border-color: #991b1b; }
+
+.hint { opacity: 0.8; }
+.roomHeader { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+#status { margin: 10px 0; font-weight: 600; }
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}
+.board > button {
+  width: 100%;
+  aspect-ratio: 1;
+  font-size: clamp(24px, 8vw, 54px);
+  font-weight: 800;
+  background: #0b1220;
+}
+
+.actions { display: flex; gap: 8px; }
+footer { text-align: center; opacity: 0.7; margin: 8px 0 24px; }

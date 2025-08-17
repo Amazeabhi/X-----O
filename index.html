@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>X & O Online (Firebase)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Online X & O</h1>
+
+    <section id="authStatus" class="card">Connecting…</section>
+
+    <section id="lobby" class="card">
+      <div class="row">
+        <button id="createBtn">Create Game</button>
+        <div class="join">
+          <input id="joinCode" maxlength="6" placeholder="Enter 6‑digit code" />
+          <button id="joinBtn">Join</button>
+        </div>
+      </div>
+      <p class="hint">Share or enter a 6‑digit code to play with a friend.</p>
+    </section>
+
+    <section id="room" class="card hidden">
+      <div class="roomHeader">
+        <div>Room Code: <strong id="roomCode">—</strong></div>
+        <div>Your Mark: <strong id="yourMark">—</strong></div>
+        <button id="leaveBtn" class="danger">Leave</button>
+      </div>
+
+      <div id="status">Waiting for opponent…</div>
+
+      <div id="board" class="board">
+        <!-- 9 cells -->
+        <button data-idx="0"></button>
+        <button data-idx="1"></button>
+        <button data-idx="2"></button>
+        <button data-idx="3"></button>
+        <button data-idx="4"></button>
+        <button data-idx="5"></button>
+        <button data-idx="6"></button>
+        <button data-idx="7"></button>
+        <button data-idx="8"></button>
+      </div>
+
+      <div class="actions">
+        <button id="resetBtn">Reset Board</button>
+        <button id="deleteBtn" class="danger">Delete Room</button>
+      </div>
+    </section>
+
+    <footer>
+      <small>Built with Firebase Firestore + Anonymous Auth</small>
+    </footer>
+  </main>
+
+  <!-- Your Firebase config goes here -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
